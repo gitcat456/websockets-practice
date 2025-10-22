@@ -42,9 +42,7 @@ wss.on('connection', (ws) => {
   // Handle messages from this client
   ws.on('message', (data) => {
     try {
-      const message = JSON.parse(data);
-      console.log('Received:', message);
-      
+      const message = JSON.parse(data);  
       // Broadcast message to all clients
       broadcast({
         type: 'chat',
@@ -79,10 +77,10 @@ wss.on('connection', (ws) => {
 });
 
 // Function to broadcast messages to all clients
-function broadcast(data, excludeWs = null) {
+function broadcast(data) {
   const message = JSON.stringify(data);
   clients.forEach(client => {
-    if (client !== excludeWs && client.readyState === WebSocket.OPEN) {
+    if (client.readyState === WebSocket.OPEN) {
       client.send(message);
     }
   });
