@@ -42,7 +42,9 @@ wss.on('connection', (ws) => {
   // Handle messages from this client
   ws.on('message', (data) => {
     try {
-      const message = JSON.parse(data);  
+      const message = JSON.parse(data);
+      
+      
       // Broadcast message to all clients
       broadcast({
         type: 'chat',
