@@ -1,7 +1,7 @@
 # ChatPulse – WebSocket Chat Demo
 
 A minimal real‑time chat application using WebSockets, built with Node.js, Express and `ws`.  
-Live demo: [https://chatpulse‑652z.onrender.com/](https://chatpulse‑652z.onrender.com/)
+Live demo: [https://chatpulse‑652z.onrender.com](https://chatpulse‑652z.onrender.com)
 
 ## Features
 
